@@ -2,7 +2,7 @@ import React from 'react';
 import './CartWidget.css';
 
 function CartWidget() {
-  const quantity = 4; // Valor fijo que quieres mostrar
+  const quantity = 4; 
 
   return (
     <div className="cart-widget">

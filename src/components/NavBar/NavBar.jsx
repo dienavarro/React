@@ -1,5 +1,7 @@
 import React from 'react';
-import '../NavBar/NavBar';
+import './Navbar.css';
+import CartWidget from '../CarWidget/CartWidget';
+
 
 function NavBar() {
   return (
@@ -10,6 +12,7 @@ function NavBar() {
         <li><a href="#categoria2">Categoría 2</a></li>
         <li><a href="#categoria3">Categoría 3</a></li>
       </ul>
+      <CartWidget />
     </nav>
   );
 }
