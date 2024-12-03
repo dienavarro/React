@@ -8,9 +8,9 @@ function NavBar() {
     <nav>
       <h1>Pura Quimica</h1>
       <ul>
-        <li><a href="#categoria1">Categoría 1</a></li>
-        <li><a href="#categoria2">Categoría 2</a></li>
-        <li><a href="#categoria3">Categoría 3</a></li>
+        <li><a href="#categoria1">Liquidos</a></li>
+        <li><a href="#categoria2">Solidos</a></li>
+        <li><a href="#categoria3">Otros</a></li>
       </ul>
       <CartWidget />
     </nav>
