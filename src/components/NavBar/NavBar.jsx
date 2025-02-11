@@ -1,50 +1,31 @@
-import React from 'react';
 import './Navbar.css';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from '../CarWidget/CartWidget';
-
+import { NavLink } from 'react-router';
 
 function NavBar() {
   return (
-    <nav>
-      <h1>Pura Quimica</h1>
-      <ul>
-        <li><a href="#categoria1">Liquidos</a></li>
-        <li><a href="#categoria2">Solidos</a></li>
-        <li><a href="#categoria3">Otros</a></li>
-      </ul>
-      <CartWidget />
-    </nav>
+    <Navbar expand="lg" bg="dark" data-bs-theme="dark" className="fixed-top">
+      <Container fluid>
+        <Navbar.Brand>
+          <NavLink to="/" className="navbar-brand no-active">Compra Click</NavLink>
+        </Navbar.Brand>
+
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <NavLink to="/category/beauty" className="nav-link">Beauty</NavLink>
+            <NavLink to="/category/fragrances" className="nav-link">Fragrances</NavLink>
+            <NavLink to="/category/furniture" className="nav-link">Furniture</NavLink>
+          </Nav>
+          <CartWidget />
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
 export default NavBar;
-
-
-
-
-const styles = {
-    nav: {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      padding: '10px 20px',
-      backgroundColor: '#f8f9fa',
-      borderBottom: '1px solid #ddd',
-    },
-    brand: {
-      fontSize: '24px',
-      fontWeight: 'bold',
-      margin: 0,
-    },
-    menu: {
-      listStyle: 'none',
-      display: 'flex',
-      gap: '15px',
-      margin: 0,
-      padding: 0,
-    },
-    menuItem: {
-      cursor: 'pointer',
-    },
-  };
   
